@@ -37,3 +37,7 @@ Access the API endpoints using the base URL http://localhost:3000/.
 # Credits
 
 -Job Seekers is inspired by LinkedIn.
+
+# Technology
+
+-Ruby on Rails
