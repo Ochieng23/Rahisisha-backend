@@ -2,7 +2,7 @@
 
 # Job Seekers - Ruby on Rails Backend
 
-This is the Ruby on Rails backend for the Job Seekers application. It provides the server-side functionality required for the application to work properly.
+This is the Ruby on Rails backend for the Job Seekers application. It provides the server-side functionality required for the application to work properly, built with ruby on rails,  and deployed on Railways. The application includes a User table with one to may relationship to the posts and follows table, it will also include admins table, employer profiles table and job seeker profiles tables
 
 # Features
 
@@ -15,7 +15,7 @@ This is the Ruby on Rails backend for the Job Seekers application. It provides t
 
 -Ruby version: 3.0.0 or higher
 -Rails version: 6.1.4 or higher
--PostgreSQL database
+-SQL database
 
 # Setup
 
@@ -41,3 +41,11 @@ Access the API endpoints using the base URL http://localhost:3000/.
 # Technology
 
 -Ruby on Rails
+
+# License
+
+Approved by Moringa school
+
+# Authors
+
+Group 6
