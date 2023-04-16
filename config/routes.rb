@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   resources :comments
   resources :posts
@@ -7,5 +9,4 @@ Rails.application.routes.draw do
   resources :employers
   resources :admins
   resources :users
-  
 end
