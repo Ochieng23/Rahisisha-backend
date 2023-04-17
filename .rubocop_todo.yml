@@ -6,175 +6,69 @@
 # Note that changes in the inspected code, or installation of new
 # versions of RuboCop, may require this file to be generated again.
 
-# Offense count: 6
-# This cop supports safe autocorrection (--autocorrect).
+# Excludes
+Exclude:
+  - 'bin/bundle'
+  - 'config/environments/development.rb'
+  - 'Gemfile'
+  - 'config/environments/production.rb'
+  - 'test/test_helper.rb'
+  - 'spec/**/*'
+  - 'test/**/*'
+  - 'app/models/application_record.rb'
+  - 'config/application.rb'
+  - 'config/puma.rb'
+
+# Layout
 Layout/EmptyLineAfterGuardClause:
-  Exclude:
-    - 'bin/bundle'
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-Layout/EmptyLines:
-  Exclude:
-    - 'config/environments/development.rb'
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: empty_lines, no_empty_lines
+  Enabled: false
 Layout/EmptyLinesAroundBlockBody:
-  Exclude:
-    - 'Gemfile'
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: AllowForAlignment, AllowBeforeTrailingComments, ForceEqualSignAlignment.
+  Enabled: false
+  EnforcedStyle: empty_lines
 Layout/ExtraSpacing:
-  Exclude:
-    - 'config/environments/production.rb'
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: AllowForAlignment, EnforcedStyleForExponentOperator.
-# SupportedStylesForExponentOperator: space, no_space
+  Enabled: false
 Layout/SpaceAroundOperators:
-  Exclude:
-    - 'config/environments/production.rb'
-
-# Offense count: 2
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBrackets.
-# SupportedStyles: space, no_space, compact
-# SupportedStylesForEmptyBrackets: space, no_space
+  Enabled: false
 Layout/SpaceInsideArrayLiteralBrackets:
-  Exclude:
-    - 'config/environments/production.rb'
-
-# Offense count: 4
-# This cop supports safe autocorrection (--autocorrect).
+  Enabled: false
+  EnforcedStyle: no_space
 Layout/SpaceInsidePercentLiteralDelimiters:
-  Exclude:
-    - 'Gemfile'
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: final_newline, final_blank_line
+  Enabled: false
 Layout/TrailingEmptyLines:
-  Exclude:
-    - 'Gemfile'
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: AllowInHeredoc.
+  Enabled: false
 Layout/TrailingWhitespace:
-  Exclude:
-    - 'Gemfile'
-
-# Offense count: 1
-# Configuration parameters: AllowedMethods, AllowedPatterns.
-Metrics/CyclomaticComplexity:
-  Max: 9
-
-# Offense count: 1
-# Configuration parameters: CountComments, CountAsOne, AllowedMethods, AllowedPatterns.
-Metrics/MethodLength:
-  Max: 13
-
-# Offense count: 1
-# Configuration parameters: AllowedMethods, AllowedPatterns.
-Metrics/PerceivedComplexity:
-  Max: 9
-
-# Offense count: 1
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: nested, compact
-Style/ClassAndModuleChildren:
-  Exclude:
-    - 'test/test_helper.rb'
-
-# Offense count: 2
-# Configuration parameters: AllowedConstants.
-Style/Documentation:
-  Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'
-    - 'app/models/application_record.rb'
-    - 'config/application.rb'
-
-# Offense count: 21
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: always, always_true, never
-Style/FrozenStringLiteralComment:
   Enabled: false
 
-# Offense count: 1
-# This cop supports unsafe autocorrection (--autocorrect-all).
+# Metrics
+Metrics/CyclomaticComplexity:
+  Enabled: false
+  Max: 9
+Metrics/MethodLength:
+  Enabled: true
+  Max: 20
+Metrics/PerceivedComplexity:
+  Enabled: true
+  Max: 15
+
+# Style
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+  AllowedConstants: []
+Style/FrozenStringLiteralComment:
+  Enabled: false
 Style/GlobalStdStream:
-  Exclude:
-    - 'config/environments/production.rb'
-
-# Offense count: 2
-# This cop supports safe autocorrection (--autocorrect).
+  Enabled: true
 Style/IfUnlessModifier:
-  Exclude:
-    - 'bin/bundle'
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
+  Enabled: true
 Style/PerlBackrefs:
-  Exclude:
-    - 'bin/bundle'
-
-# Offense count: 2
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: SafeForConstants.
+  Enabled: true
 Style/RedundantFetchBlock:
-  Exclude:
-    - 'config/puma.rb'
-
-# Offense count: 1
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: RequireEnglish.
-# SupportedStyles: use_perl_names, use_english_names, use_builtin_english_names
+  Enabled: true
 Style/SpecialGlobalVars:
+  Enabled: true
   EnforcedStyle: use_perl_names
-
-# Offense count: 74
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle, ConsistentQuotesInMultiline.
-# SupportedStyles: single_quotes, double_quotes
 Style/StringLiterals:
-  Exclude:
-    - 'Gemfile'
-    - 'Rakefile'
-    - 'bin/bundle'
-    - 'bin/rails'
-    - 'bin/rake'
-    - 'bin/setup'
-    - 'config.ru'
-    - 'config/application.rb'
-    - 'config/boot.rb'
-    - 'config/environment.rb'
-    - 'config/environments/development.rb'
-    - 'config/environments/production.rb'
-    - 'config/environments/test.rb'
-    - 'config/puma.rb'
-    - 'test/test_helper.rb'
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: .
-# SupportedStyles: percent, brackets
-Style/SymbolArray:
-  EnforcedStyle: percent
-  MinSize: 10
-
-# Offense count: 2
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, AllowedPatterns.
-# URISchemes: http, https
-Layout/LineLength:
-  Max: 198
+  Enabled: true
+  EnforcedStyle: single_quotes
