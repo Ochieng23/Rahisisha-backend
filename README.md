@@ -22,23 +22,23 @@ GET/admins/{{admin-code}} - Find an Individual Admin<br>
 GET/users - Get All Platform Users<br>
 DELETE/user/{{user-id}} - Delete User<br>
 
-<br>EMPLOYER<br>
-<br>POST/users - Create a User Account<br>
-<br>POST/generate-token - Generate Token<br>
-<br>POST/employers - Complete Employer Account<br>
-<br>PATCH/employers/{{employee-code}} - Modify/Update Employer<br>
-<br>PATCH//employers/{{employee-code}}/verify - Verify Employer<br>
-<br>GET/employers - View all Employers<br>
-<br>GET/employers//{{employee-code}} - View an Individual Employer<br>
+EMPLOYER<br>
+POST/users - Create a User Account<br>
+POST/generate-token - Generate Token<br>
+POST/employers - Complete Employer Account<br>
+PATCH/employers/{{employee-code}} - Modify/Update Employer<br>
+PATCH//employers/{{employee-code}}/verify - Verify Employer<br>
+GET/employers - View all Employers<br>
+GET/employers//{{employee-code}} - View an Individual Employer<br>
 
-<br>JOB-SEEKER<br>
-<br>POST/users - Create a User Account<br>
-<br>POST/generate-token - Generate Token<br>
-<br>POST/seekers - Complete Job-Seekers Account<br>
-<br>PATCH/seekers/{{job-seeker-code}} - Modify/Update Job-Seeker<br>
-<br>PATCH/seekers/{{job-seeker-code}}/verify - Verify a Job-Seeker<br>
-<br>GET/seekers - View all Job-Seekers<br>
-<br>GET/seekers/{{job-seeker-code}} - View an Individual Job-Seeker<br>
+JOB-SEEKER<br>
+POST/users - Create a User Account<br>
+POST/generate-token - Generate Token<br>
+POST/seekers - Complete Job-Seekers Account<br>
+PATCH/seekers/{{job-seeker-code}} - Modify/Update Job-Seeker<br>
+PATCH/seekers/{{job-seeker-code}}/verify - Verify a Job-Seeker<br>
+GET/seekers - View all Job-Seekers<br>
+GET/seekers/{{job-seeker-code}} - View an Individual Job-Seeker<br>
 
 # Requirements
 
