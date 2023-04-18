@@ -17,4 +17,17 @@ Rails.application.routes.draw do
   # verify profiles
   patch "/employers/:id/verify",to: "admins#verify_employer"
   patch "/seekers/:id/verify", to: "admins#verify_seeker"
+
+   # custom job search, e.g. find doctor jobs
+   get "/jobs/search/:jobtag_code", to: "jobs#search"
+
+   # custom post search for all user posts
+   get "/posts/users/:user_code", to: "posts#user_posts"
+ 
+   # get all post comments based on post_code
+   get "/comments/post/:post_code", to: "comments#post_comments"
+ 
+   # generate an access token to enable login
+   post '/generate-token/', to: 'auth#login'
+ 
 end
