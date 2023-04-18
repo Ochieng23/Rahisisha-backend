@@ -12,8 +12,9 @@ This is the Ruby on Rails backend for the Job Seekers application. It provides t
 -Integration with PostgreSQL database to store application data.
 
 # Routes
--ADMIN
--POST/users - Create a User Account
+
+<br>-ADMIN<br>
+<br>-POST/users - Create a User Account<br>
 -POST/generate-token - Generate Token
 -POST/admins - Complete Admin Account
 -GET/admins - View All Admins
