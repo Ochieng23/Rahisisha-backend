@@ -4,6 +4,10 @@ class ApplicationController < ActionController::API
     before_action :authenticate_user
     skip_before_action :verify_authenticity_token
 
+    # show error message when trying to use invalid parameters to create entity
+    rescue_from ActiveRecord::RecordInvalid, with: :invalid_params
+    # show error message when requested resouce is not found
+    rescue_from ActiveRecord::RecordNotFound, with: :render_not_found
      # this method is called to generate id for tables, encoded as strings
      def generate_code(length)
         # characters allowed in the varchar string
@@ -49,4 +53,13 @@ class ApplicationController < ActionController::API
           render json: { error: 'Token not provided' }, status: 403
         end
     end 
+    private
+
+    def invalid_params(invalid)
+        render json: { errors: [invalid.record.errors] }, status: :unprocessable_entity
+    end
+
+    def render_not_found(invalid)
+        render json: { errors: [invalid.exception] }, status: :not_found
+    end
 end
