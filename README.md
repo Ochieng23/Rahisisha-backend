@@ -13,14 +13,14 @@ This is the Ruby on Rails backend for the Job Seekers application. It provides t
 
 # Routes
 
-<br>ADMIN<br>
-<br>POST/users - Create a User Account<br>
-<br>POST/generate-token - Generate Token</br>
-<br>POST/admins - Complete Admin Account</br>
-<br>GET/admins - View All Admins</br>
-<br>GET/admins/{{admin-code}} - Find an Individual Admin<br>
-<br>GET/users - Get All Platform Users<br>
-<br>DELETE/user/{{user-id}} - Delete User<br>
+ADMIN<br>
+POST/users - Create a User Account<br>
+POST/generate-token - Generate Token<br>
+POST/admins - Complete Admin Account<br>
+GET/admins - View All Admins<br>
+GET/admins/{{admin-code}} - Find an Individual Admin<br>
+GET/users - Get All Platform Users<br>
+DELETE/user/{{user-id}} - Delete User<br>
 
 <br>EMPLOYER<br>
 <br>POST/users - Create a User Account<br>
