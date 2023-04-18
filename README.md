@@ -11,7 +11,7 @@ This is the Ruby on Rails backend for the Job Seekers application. It provides t
 -API endpoints to handle CRUD operations for job listings, user -profiles, and job applications.
 -Integration with PostgreSQL database to store application data.
 
-# Routes
+# Api Endpoints
 
 ADMIN<br>
 POST/users - Create a User Account<br>
