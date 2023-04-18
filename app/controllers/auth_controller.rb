@@ -1,5 +1,6 @@
 class AuthController < ApplicationController
-    # Log in action
+    skip_before_action :authenticate_user
+    # Log in action=> Generates access token
     def login
       user = User.find_by(username: params[:username])
       if user && user.authenticate(params[:password])
