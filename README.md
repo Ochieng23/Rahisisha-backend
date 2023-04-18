@@ -11,6 +11,33 @@ This is the Ruby on Rails backend for the Job Seekers application. It provides t
 -API endpoints to handle CRUD operations for job listings, user -profiles, and job applications.
 -Integration with PostgreSQL database to store application data.
 
+# Routes
+ADMIN
+POST/users - Create a User Account
+POST/generate-token - Generate Token
+POST/admins - Complete Admin Account
+GET/admins - View All Admins
+GET/admins/{{admin-code}} - Find an Individual Admin
+GET/users - Get All Platform Users
+DELETE/user/{{user-id}} - Delete User
+
+EMPLOYER
+POST/users - Create a User Account
+POST/generate-token - Generate Token
+POST/employers - Complete Employer Account
+PATCH/employers/{{employee-code}} - Modify/Update Employer
+PATCH//employers/{{employee-code}}/verify - Verify Employer
+GET/employers - View all Employers
+GET/employers//{{employee-code}} - View an Individual Employer
+
+JOB-SEEKER
+POST/users - Create a User Account
+POST/generate-token - Generate Token
+POST/seekers - Complete Job-Seekers Account
+PATCH/seekers/{{job-seeker-code}} - Modify/Update Job-Seeker 
+PATCH/seekers/{{job-seeker-code}}/verify - Verify a Job-Seeker
+GET/seekers - View all Job-Seekers
+GET/seekers/{{job-seeker-code}} - View an Individual Job-Seeker
 # Requirements
 
 -Ruby version: 3.0.0 or higher
