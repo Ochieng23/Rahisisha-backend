@@ -16,6 +16,6 @@ class User < ApplicationRecord
     has_one :seeker, foreign_key: :user_code
     has_one :admin, foreign_key: :user_code
 
-    has_many :posts
-    has_many :comments
+    has_many :posts, dependent: :destroy
+    has_many :comments, dependent: :destroy
 end
