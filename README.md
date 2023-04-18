@@ -13,32 +13,33 @@ This is the Ruby on Rails backend for the Job Seekers application. It provides t
 
 # Routes
 
-<br>-ADMIN<br>
-<br>-POST/users - Create a User Account<br>
--POST/generate-token - Generate Token
--POST/admins - Complete Admin Account
--GET/admins - View All Admins
--GET/admins/{{admin-code}} - Find an Individual Admin
--GET/users - Get All Platform Users
--DELETE/user/{{user-id}} - Delete User
+<br>ADMIN<br>
+<br>POST/users - Create a User Account<br>
+<br>POST/generate-token - Generate Token</br>
+<br>POST/admins - Complete Admin Account</br>
+<br>GET/admins - View All Admins</br>
+<br>GET/admins/{{admin-code}} - Find an Individual Admin<br>
+<br>GET/users - Get All Platform Users<br>
+<br>DELETE/user/{{user-id}} - Delete User<br>
 
--EMPLOYER
--POST/users - Create a User Account
--POST/generate-token - Generate Token
--POST/employers - Complete Employer Account
--PATCH/employers/{{employee-code}} - Modify/Update Employer
--PATCH//employers/{{employee-code}}/verify - Verify Employer
--GET/employers - View all Employers
--GET/employers//{{employee-code}} - View an Individual Employer
+<br>EMPLOYER<br>
+<br>POST/users - Create a User Account<br>
+<br>POST/generate-token - Generate Token<br>
+<br>POST/employers - Complete Employer Account<br>
+<br>PATCH/employers/{{employee-code}} - Modify/Update Employer<br>
+<br>PATCH//employers/{{employee-code}}/verify - Verify Employer<br>
+<br>GET/employers - View all Employers<br>
+<br>GET/employers//{{employee-code}} - View an Individual Employer<br>
 
--JOB-SEEKER
--POST/users - Create a User Account
--POST/generate-token - Generate Token
--POST/seekers - Complete Job-Seekers Account
--PATCH/seekers/{{job-seeker-code}} - Modify/Update Job-Seeker 
--PATCH/seekers/{{job-seeker-code}}/verify - Verify a Job-Seeker
--GET/seekers - View all Job-Seekers
--GET/seekers/{{job-seeker-code}} - View an Individual Job-Seeker
+<br>JOB-SEEKER<br>
+<br>POST/users - Create a User Account<br>
+<br>POST/generate-token - Generate Token<br>
+<br>POST/seekers - Complete Job-Seekers Account<br>
+<br>PATCH/seekers/{{job-seeker-code}} - Modify/Update Job-Seeker<br>
+<br>PATCH/seekers/{{job-seeker-code}}/verify - Verify a Job-Seeker<br>
+<br>GET/seekers - View all Job-Seekers<br>
+<br>GET/seekers/{{job-seeker-code}} - View an Individual Job-Seeker<br>
+
 # Requirements
 
 -Ruby version: 3.0.0 or higher
