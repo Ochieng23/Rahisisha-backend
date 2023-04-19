@@ -40,6 +40,36 @@ PATCH/seekers/{{job-seeker-code}}/verify - Verify a Job-Seeker<br>
 GET/seekers - View all Job-Seekers<br>
 GET/seekers/{{job-seeker-code}} - View an Individual Job-Seeker<br>
 
+JOB-TAGS<br>
+POST/jobtags - Configure Job-Types<br>
+GET/jobtags - Get Job Tags<br>
+
+
+JOBS<br>
+POST/jobs - Post All Job-Listings<br>
+GET/jobs - Get All Jobs<br>
+GET/jobs/search/{{jobtag_code}} - View Job Listings Per User Preferrence<br>
+DELETE/jobs/{{job_code}} - Delete Job Listing<br>
+
+POSTS<br>
+POST/posts - Create a Post<br>
+GET/posts - Browse  Posts<br>
+GET/posts/users/{{user-id}}   - Get User Posts<br>
+GET/posts/{{post-id}}  - Get individual post<br>
+DELETE/posts/{{post-id}} - Delete Post<br>
+
+COMMENTS<br>
+POST/comments - Comment on a Post<br>
+GET/comments/post/{{post-code}} - Get All Post Comments<br>
+DELETE/comments/{{comment-code}} - Delete A Comment<br>
+
+
+
+
+
+
+
+
 # Requirements
 
 -Ruby version: 3.0.0 or higher
