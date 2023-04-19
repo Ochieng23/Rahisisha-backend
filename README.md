@@ -28,6 +28,56 @@ This is the Ruby on Rails backend for the Job Seekers application. It provides t
 
 Access the API endpoints using the base URL http://localhost:3000/.
 
+# Routes
+POST
+
+Configure Job types
+http://127.0.0.1:3000/jobtags
+
+Post Job listing
+http://127.0.0.1:3000/jobs
+
+Create a Post
+http://127.0.0.1:3000/posts
+
+Comment on a Post
+http://127.0.0.1:3000/comments
+
+GET
+
+Get Job tags
+http://127.0.0.1:3000/jobtags
+
+Get All Jobs
+http://127.0.0.1:3000/jobs
+
+View Job listings Per User Preference
+http://127.0.0.1:3000/jobs/search/{{jobtag_code}}
+
+Browse Posts
+http://127.0.0.1:3000/posts
+
+Get User Posts
+http://127.0.0.1:3000/posts/users/{{user-id}}
+
+Get Individual Post
+http://127.0.0.1:3000/posts/{{post-id}}
+
+Get All Post Comments
+http://127.0.0.1:3000/comments
+
+DELETE
+
+Delete Job listing
+http://127.0.0.1:3000/jobs/{{job_code}}
+
+Delete Post
+http://127.0.0.1:3000/posts/{{post-id}}
+
+Delete A Comment
+http://127.0.0.1:3000/comments/{{comment-code}}
+
+
 # Contributing
 
 -Fork the repository and create a new branch.
