@@ -24,9 +24,7 @@ This is the Ruby on Rails backend for the Job Seekers application. It provides t
 -Setup the database by running rails db:create and rails -db:migrate.
 -Start the server by running rails s.
 
-# Usage
 
-Access the API endpoints using the base URL http://localhost:3000/.
 
 # Routes
 POST
