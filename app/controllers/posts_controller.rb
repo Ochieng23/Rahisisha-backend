@@ -36,6 +36,7 @@ class PostsController < ApplicationController
         head :no_content
     end
 
+
     private
     
     def find_post
@@ -43,6 +44,6 @@ class PostsController < ApplicationController
     end
 
     def post_params
-        params.permit(:likes, :media, :description, :title)
+        params.permit(:likes, :media, :image, :video, :description, :title)
     end
 end

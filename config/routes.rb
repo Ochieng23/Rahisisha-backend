@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  namespace :api do
+    namespace :v1 do
+      get 'blobs/show'
+    end
+  end
   resources :comments
   resources :posts
   resources :jobs
@@ -30,4 +35,10 @@ Rails.application.routes.draw do
    # generate an access token to enable login
    post '/generate-token/', to: 'auth#login'
  
+
+   namespace :api do
+    namespace :v1 do
+      resources :blobs, only: [:show]
+    end
+  end
 end

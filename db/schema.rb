@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_19_091422) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_20_054443) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -67,7 +67,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_19_091422) do
     t.string "company_name"
     t.string "email"
     t.string "location"
-    t.string "avatar"
     t.string "description"
     t.boolean "verified"
     t.string "user_code"
@@ -98,7 +97,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_19_091422) do
   create_table "posts", force: :cascade do |t|
     t.string "post_code"
     t.string "title"
-    t.string "media"
     t.string "description"
     t.integer "likes"
     t.string "user_code"
@@ -114,7 +112,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_19_091422) do
     t.string "location"
     t.string "gender"
     t.string "date_of_birth"
-    t.string "avatar"
     t.string "phone_number"
     t.string "preferred_job"
     t.string "availability"

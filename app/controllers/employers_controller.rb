@@ -25,6 +25,7 @@ class EmployersController < ApplicationController
         head :no_content
     end
 
+
     private
 
     def find_employer

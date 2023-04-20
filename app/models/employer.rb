@@ -12,4 +12,6 @@ class Employer < ApplicationRecord
     # relations
     belongs_to :user, foreign_key: :user_code
     has_many :jobs
+
+    has_one_attached :avatar
 end

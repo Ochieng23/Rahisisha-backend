@@ -1,13 +1,13 @@
-local:
-  service: Disk
-  root: <%= Rails.root.join("storage") %>
+# local:
+#   service: Disk
+#   root: <%= Rails.root.join("storage") %>
 #   # test:
 #   # service: local
-# azure:
-#   service: AzureStorage
-#   storage_account_name: "bailabackend"
-#   storage_access_key: "eTA63RT7OL25xfNqbwvrnqDvMhxS4XbDyBnPixLKMKD84PL1ofQWXJktSZCn3Ri7nsSTKfEGDKro+ASt9PfQ9A=="
-#   container: "baila"
+azure:
+  service: AzureStorage
+  storage_account_name: "bailabackend"
+  storage_access_key: "eTA63RT7OL25xfNqbwvrnqDvMhxS4XbDyBnPixLKMKD84PL1ofQWXJktSZCn3Ri7nsSTKfEGDKro+ASt9PfQ9A=="
+  container: "baila"
 # production:
 #   service: AzureStorage
 # production:
