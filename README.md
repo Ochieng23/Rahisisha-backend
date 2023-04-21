@@ -64,12 +64,6 @@ GET/comments/post/{{post-code}} - Get All Post Comments<br>
 DELETE/comments/{{comment-code}} - Delete A Comment<br>
 
 
-
-
-
-
-
-
 # Requirements
 
 -Ruby version: 3.0.0 or higher
@@ -82,57 +76,6 @@ DELETE/comments/{{comment-code}} - Delete A Comment<br>
 -Install the required gems by running bundle install.
 -Setup the database by running rails db:create and rails -db:migrate.
 -Start the server by running rails s.
-
-
-
-# Routes
-POST
-
-Configure Job types
-http://127.0.0.1:3000/jobtags
-
-Post Job listing
-http://127.0.0.1:3000/jobs
-
-Create a Post
-http://127.0.0.1:3000/posts
-
-Comment on a Post
-http://127.0.0.1:3000/comments
-
-GET
-
-Get Job tags
-http://127.0.0.1:3000/jobtags
-
-Get All Jobs
-http://127.0.0.1:3000/jobs
-
-View Job listings Per User Preference
-http://127.0.0.1:3000/jobs/search/{{jobtag_code}}
-
-Browse Posts
-http://127.0.0.1:3000/posts
-
-Get User Posts
-http://127.0.0.1:3000/posts/users/{{user-id}}
-
-Get Individual Post
-http://127.0.0.1:3000/posts/{{post-id}}
-
-Get All Post Comments
-http://127.0.0.1:3000/comments
-
-DELETE
-
-Delete Job listing
-http://127.0.0.1:3000/jobs/{{job_code}}
-
-Delete Post
-http://127.0.0.1:3000/posts/{{post-id}}
-
-Delete A Comment
-http://127.0.0.1:3000/comments/{{comment-code}}
 
 
 # Contributing
