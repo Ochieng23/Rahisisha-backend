@@ -64,12 +64,6 @@ GET/comments/post/{{post-code}} - Get All Post Comments<br>
 DELETE/comments/{{comment-code}} - Delete A Comment<br>
 
 
-
-
-
-
-
-
 # Requirements
 
 -Ruby version: 3.0.0 or higher
