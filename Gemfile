@@ -11,7 +11,6 @@ gem 'sprockets', '~>3.0'
 gem 'pg', '~> 1.1'
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
-#gem 'racc', '~> 1.4.0'
 gem 'rack-cors'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
@@ -49,7 +48,6 @@ gem 'bootsnap', require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
- gem "rack-cors"
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
