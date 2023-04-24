@@ -751,7 +751,7 @@ POST/comments - Comment on a Post<br>
     "user_code": "string",
     "user": {
         "user_code": "string",
-        "username": "HANNAN",
+        "username": "string",
         "role": "EMPLOYER"
     }
 }
@@ -774,7 +774,7 @@ GET/comments/post/{{post-code}} - Get All Post Comments<br>
         "user_code": "string",
         "user": {
             "user_code": "string",
-            "username": "HANNAN",
+            "username": "string",
             "role": "EMPLOYER"
         }
     }
