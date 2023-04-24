@@ -11,7 +11,9 @@ gem 'sprockets', '~>3.0'
 gem 'pg', '~> 1.1'
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
-gem 'racc', '~> 1.4.0'
+#gem 'racc', '~> 1.4.0'
+gem 'rack-cors'
+
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails'
 gem 'active_model_serializers', '~> 0.10.12'
@@ -62,3 +64,9 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+gem 'activestorage', '~> 7.0', '>= 7.0.4.3'
+
+gem "image_processing", ">= 1.2"
+
+gem "azure-storage-blob", require: false
