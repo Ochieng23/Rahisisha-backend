@@ -373,7 +373,7 @@ PATCH/seekers/{{job-seeker-code}} - Modify/Update Job-Seeker<br>
     "phone_number": "string",
     "preferred_job": "string",
     "availability": "string",
-    "minimum_salary": integer
+    "minimum_salary": "integer"
 }
 ```
 
@@ -391,7 +391,7 @@ PATCH/seekers/{{job-seeker-code}} - Modify/Update Job-Seeker<br>
     "phone_number": "string",
     "preferred_job": "string",
     "availability": "string",
-    "minimum_salary": integer,
+    "minimum_salary": "integer",
     "verified": false
 }
 ```
@@ -416,7 +416,7 @@ PATCH/seekers/{{job-seeker-code}}/verify - Verify a Job-Seeker<br>
     "phone_number": "string",
     "preferred_job": "string",
     "availability": "string",
-    "minimum_salary": integer,
+    "minimum_salary": "integer",
     "verified": true
 }
 ```
@@ -443,7 +443,7 @@ GET/seekers - View all Job-Seekers<br>
         "phone_number": "string",
         "preferred_job": "string",
         "availability": "string",
-        "minimum_salary": integer,
+        "minimum_salary": "integer",
         "verified": true
     }
 ]
@@ -470,33 +470,330 @@ GET/seekers/{{job-seeker-code}} - View an Individual Job-Seeker<br>
     "phone_number": "string",
     "preferred_job": "string",
     "availability": "string",
-    "minimum_salary": integer,
+    "minimum_salary": "integer",
     "verified": true
 }
 ``` 
 
 JOB-TAGS<br>
 POST/jobtags - Configure Job-Types<br>
-GET/jobtags - Get Job Tags<br>
+```json
+{
+  "group_name": "Medicine"
+}
+```
 
+- Response:
+
+```json
+{
+    "jobtag_code": "string",
+    "group_name": "Medicine"
+}
+``` 
+GET/jobtags - Get Job Tags<br>
+```json
+{
+    "token": "string"
+}
+```
+
+- Response:
+
+```json
+{
+[
+    {
+        "jobtag_code": "kxn2-ffac-3fqx",
+        "group_name": "Office Work"
+    },
+    {
+        "jobtag_code": "6jqe-77go-fqe6",
+        "group_name": "Casual"
+    },
+    {
+        "jobtag_code": "sqr2-nhhp-bl0l",
+        "group_name": "Medicine"
+    }
+]
+}
+``` 
 
 JOBS<br>
 POST/jobs - Post All Job-Listings<br>
+```json
+{
+    "job_name": "string",
+    "job_description": "string",
+    "employer_code": "string",
+    "jobtag_code": "string"
+}
+```
+
+- Response:
+
+```json
+{
+    "job_code": "string",
+    "job_name": "Engineering",
+    "employer_code": "string",
+    "employer": {
+        "employer_code": "string",
+        "company_name": "string",
+        "email": "user@example.com",
+        "location": "string",
+        "avatar": "url",
+        "description": "string",
+        "verified": true
+    },
+    "jobtag": {
+        "jobtag_code": "string",
+        "group_name": "Engineering"
+    }
+}
+``` 
 GET/jobs - Get All Jobs<br>
+```json
+{
+    "token": "string"
+}
+```
+
+- Response:
+
+```json
+{
+    "job_code": "string",
+    "job_name": "Engineering",
+    "employer_code": "string",
+    "employer": {
+        "employer_code": "string",
+        "company_name": "string",
+        "email": "user@example.com",
+        "location": "string",
+        "avatar": "url",
+        "description": "string",
+        "verified": true
+    },
+    "jobtag": {
+        "jobtag_code": "string",
+        "group_name": "Engineering"
+    }
+}
+``` 
 GET/jobs/search/{{jobtag_code}} - View Job Listings Per User Preferrence<br>
+```json
+{
+    "token": "string"
+}
+```
+
+- Response:
+
+```json
+{
+    "jobtag_code": "string",
+    "group_name": "string"
+}
+```
 DELETE/jobs/{{job_code}} - Delete Job Listing<br>
+```json
+{
+  "token": "string"
+}
+```
+
+- Response:
+
+```json
+{
+    "success": "Deleted successfully"
+}
+```
 
 POSTS<br>
 POST/posts - Create a Post<br>
+```json
+{
+    "title": "A green earth for prosperity",
+    "media": "url",
+    "description": "string",
+    "user_code": "string",
+    "likes": 0
+}
+```
+
+- Response:
+
+```json
+{
+    "post_code": "string",
+    "title": "A green earth for prosperity",
+    "media": "url",
+    "description": "string",
+    "likes": 0,
+    "user": {
+        "user_code": "string",
+        "username": "string",
+        "role": "EMPLOYER"
+    },
+    "comments": []
+}
+``` 
 GET/posts - Browse  Posts<br>
+```json
+{
+    "token": "string"
+}
+```
+
+- Response:
+
+```json
+{
+[
+    "post_code": "string",
+    "title": "A green earth for prosperity",
+    "media": "url",
+    "description": "string",
+    "likes": 0,
+    "user": {
+        "user_code": "string",
+        "username": "string",
+        "role": "EMPLOYER"
+    },
+    "comments": []
+]
+}
+``` 
 GET/posts/users/{{user-id}}   - Get User Posts<br>
+```json
+{
+    "token": "string"
+}
+```
+
+- Response:
+
+```json
+{
+[
+    "post_code": "string",
+    "title": "A green earth for prosperity",
+    "media": "url",
+    "description": "string",
+    "likes": 0,
+    "user": {
+        "user_code": "string",
+        "username": "string",
+        "role": "EMPLOYER"
+    },
+    "comments": []
+]
+}
+``` 
 GET/posts/{{post-id}}  - Get individual post<br>
+```json
+{
+    "token": "string"
+}
+```
+
+- Response:
+
+```json
+{
+    "post_code": "string",
+    "title": "A green earth for prosperity",
+    "media": "url",
+    "description": "string",
+    "likes": 0,
+    "user": {
+        "user_code": "string",
+        "username": "string",
+        "role": "EMPLOYER"
+    },
+    "comments": []
+}
+``` 
 DELETE/posts/{{post-id}} - Delete Post<br>
+```json
+{
+  "token": "string"
+}
+```
+
+- Response:
+
+```json
+{
+    "success": "Deleted successfully"
+}
+```
 
 COMMENTS<br>
 POST/comments - Comment on a Post<br>
+```json
+{
+    "content": "Great Ininitive guys, hoping to join you next time!",
+    "post_code": "string",
+    "user_code": "string"
+}
+```
+
+- Response:
+
+```json
+{
+     "comment_code": "string",
+    "content": "Great Ininitive guys, hoping to join you next time!",
+    "post_code": "string",
+    "user_code": "string",
+    "user": {
+        "user_code": "string",
+        "username": "HANNAN",
+        "role": "EMPLOYER"
+    }
+}
+``` 
 GET/comments/post/{{post-code}} - Get All Post Comments<br>
+```json
+{
+    "token": "string"
+}
+```
+
+- Response:
+
+```json
+{
+   {
+        "comment_code": "string",
+        "content": "Great Ininitive guys, hoping to join you next time!",
+        "post_code": "string",
+        "user_code": "string",
+        "user": {
+            "user_code": "string",
+            "username": "HANNAN",
+            "role": "EMPLOYER"
+        }
+    }
+}
+``` 
 DELETE/comments/{{comment-code}} - Delete A Comment<br>
+```json
+{
+  "token": "string"
+}
+```
+
+- Response:
+
+```json
+{
+    "success": "Deleted successfully"
+}
+```
 
 
 # Requirements
