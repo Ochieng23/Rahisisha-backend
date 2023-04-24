@@ -36,7 +36,7 @@ module Rahisisha
         origins '*'
         resource '*',
                  headers: :any,
-                 expose: %w(access-token expiry token-type uid client),
+                 expose: %w(access-token expiry token-type uid client), 
                  methods: %i(get post patch options put delete)
       end
     end
