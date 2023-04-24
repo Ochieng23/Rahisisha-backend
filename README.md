@@ -20,7 +20,7 @@ POST/users - Create a User Account<br>
   "username": "string",
   "password": "string",
   "password_confirmation": "string",
-  "role": "string"
+  "role": "ADMIN"
 
 }
 ```
@@ -29,7 +29,9 @@ POST/users - Create a User Account<br>
 
 ```json
 {
-  "success": "User created successfully"
+    "user_code": "string",
+    "username": "string",
+    "role": "ADMIN"
 }
 ```
 POST/generate-token - Generate Token<br>
@@ -48,10 +50,107 @@ POST/generate-token - Generate Token<br>
 }
 ```
 POST/admins - Complete Admin Account<br>
+```json
+{
+  "full_name": "string",
+  "email":"user@example.com",
+  "user_code": "string"
+}
+```
+
+- Response:
+
+```json
+{
+    "admin_code": "string",
+    "full_name": "string",
+    "email": "user@example.com",
+    "user_code": "string"
+}
+```
 GET/admins - View All Admins<br>
+```json
+{
+  "token": "string"
+}
+```
+
+- Response:
+
+```json
+{
+  [
+    {
+        "admin_code": "string",
+        "full_name": "string",
+        "email": "user@example.com",
+        "user_code": "string"
+    },
+    {
+        "admin_code": "string",
+        "full_name": "string",
+        "email": "user@example.com",
+        "user_code": "string"
+    }
+]
+}
+```
 GET/admins/{{admin-code}} - Find an Individual Admin<br>
+```json
+{
+  "token": "string"
+}
+```
+
+- Response:
+
+```json
+{
+        "admin_code": "string",
+        "full_name": "string",
+        "email": "user@example.com",
+        "user_code": "string"
+}
+```
 GET/users - Get All Platform Users<br>
+```json
+{
+  "token": "string"
+}
+```
+
+- Response:
+
+```json
+{
+  [
+    {
+        "user_code": "string",
+        "username": "string",
+        "role": "ADMIN"
+    },
+    {
+        "user_code": "string",
+        "username": "string",
+        "role": "EMPLOYER"
+    }
+]
+}
+```
 DELETE/user/{{user-id}} - Delete User<br>
+```json
+{
+  "token": "string"
+}
+```
+
+- Response:
+
+```json
+{
+    "success": "Deleted successfully"
+}
+```
 
 EMPLOYER<br>
 POST/users - Create a User Account<br>
@@ -60,7 +159,7 @@ POST/users - Create a User Account<br>
   "username": "string",
   "password": "string",
   "password_confirmation": "string",
-  "role": "string"
+  "role": "EMPLOYER"
 
 }
 ```
@@ -69,7 +168,9 @@ POST/users - Create a User Account<br>
 
 ```json
 {
-  "success": "User created successfully"
+    "user_code": "string",
+    "username": "string",
+    "role": "EMPLOYER"
 }
 ```
 POST/generate-token - Generate Token<br>
@@ -88,11 +189,116 @@ POST/generate-token - Generate Token<br>
 }
 ```
 POST/employers - Complete Employer Account<br>
-PATCH/employers/{{employee-code}} - Modify/Update Employer<br>
-PATCH//employers/{{employee-code}}/verify - Verify Employer<br>
-GET/employers - View all Employers<br>
-GET/employers//{{employee-code}} - View an Individual Employer<br>
+```json
+{
+   "company_name": "string",
+    "email": "user@example.com",
+    "phone_number": "string",    
+    "verified": false,
+    "user_code": "string"
+}
+```
 
+- Response:
+
+```json
+{
+    "employer_code": "string",
+    "company_name": "string",
+    "email": "user@example.com",
+    "location": "string",
+    "avatar": "",
+    "description": "",
+    "verified": false
+}
+```
+PATCH/employers/{{employee-code}} - Modify/Update Employer<br>
+```json
+{
+   "location": "string",
+    "avatar": "url",
+    "description": "string"
+}
+```
+
+- Response:
+
+```json
+{
+    "employer_code": "string",
+    "company_name": "string",
+    "email": "user@example.com",
+    "location": "string",
+    "avatar": "url",
+    "description": "string",
+    "verified": false
+}
+```
+PATCH//employers/{{employee-code}}/verify - Verify Employer<br>
+```json
+{
+    "verified": true
+}
+```
+
+- Response:
+
+```json
+{
+   "employer_code": "string",
+    "company_name": "string",
+    "email": "user@example.com",
+    "location": "string",
+    "avatar": "url",
+    "description": "string",
+    "verified": true
+}
+```
+GET/employers - View all Employers<br>
+```json
+{
+  "token": "string"
+}
+```
+
+- Response:
+
+```json
+{
+  [
+    {
+        "employer_code": "string",
+        "company_name": "string",
+        "email": "user@example.com",
+        "location": "string",
+        "avatar": "url",
+        "description": "string",
+        "verified": true
+    }
+]
+}
+```
+
+GET/employers//{{employee-code}} - View an Individual Employer<br>
+```json
+{
+  "token": "string"
+}
+```
+
+- Response:
+
+```json
+{
+    "employer_code": "string",
+    "company_name": "string",
+    "email": "user@example.com",
+    "location": "string",
+    "avatar": "url",
+    "description": "string",
+    "verified": true
+}
+```
 JOB-SEEKER<br>
 POST/users - Create a User Account<br>
 ```json
@@ -100,7 +306,7 @@ POST/users - Create a User Account<br>
   "username": "string",
   "password": "string",
   "password_confirmation": "string",
-  "role": "string"
+  "role": "SEEKER"
 
 }
 ```
@@ -109,7 +315,9 @@ POST/users - Create a User Account<br>
 
 ```json
 {
-  "success": "User created successfully"
+    "user_code": "string",
+    "username": "string",
+    "role": "SEEKER"
 }
 ```
 POST/generate-token - Generate Token<br>
@@ -128,10 +336,144 @@ POST/generate-token - Generate Token<br>
 }
 ```
 POST/seekers - Complete Job-Seekers Account<br>
+```json
+{
+    "full_name": "string",
+    "email": "user@example.com",   
+    "verified": false,
+    "user_code": "string"
+}
+```
+
+- Response:
+
+```json
+{
+    "seeker_code": "string",
+    "full_name": "string",
+    "email": "user@example.com",
+    "location": null,
+    "gender": null,
+    "date_of_birth": null,
+    "avatar": null,
+    "phone_number": null,
+    "preferred_job": null,
+    "availability": null,
+    "minimum_salary": null,
+    "verified": false
+}
+```
 PATCH/seekers/{{job-seeker-code}} - Modify/Update Job-Seeker<br>
+```json
+{
+    "location": "string",
+    "gender": "string",
+    "date_of_birth": "string",
+    "avatar": "url",
+    "phone_number": "string",
+    "preferred_job": "string",
+    "availability": "string",
+    "minimum_salary": integer
+}
+```
+
+- Response:
+
+```json
+{
+    "seeker_code": "string",
+    "full_name": "string",
+    "email": "user@example.com",
+    "location": "string",
+    "gender": "string",
+    "date_of_birth": "string",
+    "avatar": "url",
+    "phone_number": "string",
+    "preferred_job": "string",
+    "availability": "string",
+    "minimum_salary": integer,
+    "verified": false
+}
+```
 PATCH/seekers/{{job-seeker-code}}/verify - Verify a Job-Seeker<br>
+```json
+{
+    "verified": true
+}
+```
+
+- Response:
+
+```json
+{
+    "seeker_code": "string",
+    "full_name": "string",
+    "email": "user@example.com",
+    "location": "string",
+    "gender": "string",
+    "date_of_birth": "string",
+    "avatar": "url",
+    "phone_number": "string",
+    "preferred_job": "string",
+    "availability": "string",
+    "minimum_salary": integer,
+    "verified": true
+}
+```
 GET/seekers - View all Job-Seekers<br>
+```json
+{
+  "token": "string"
+}
+```
+
+- Response:
+
+```json
+{
+  [
+    {
+        "seeker_code": "string",
+        "full_name": "string",
+        "email": "user@example.com",
+        "location": "string",
+        "gender": "string",
+        "date_of_birth": "string",
+        "avatar": "url",
+        "phone_number": "string",
+        "preferred_job": "string",
+        "availability": "string",
+        "minimum_salary": integer,
+        "verified": true
+    }
+]
+}
+```
 GET/seekers/{{job-seeker-code}} - View an Individual Job-Seeker<br>
+```json
+{
+  "token": "string"
+}
+```
+
+- Response:
+
+```json
+{
+   "seeker_code": "string",
+    "full_name": "string",
+    "email": "user@example.com",
+    "location": "string",
+    "gender": "string",
+    "date_of_birth": "string",
+    "avatar": "url",
+    "phone_number": "string",
+    "preferred_job": "string",
+    "availability": "string",
+    "minimum_salary": integer,
+    "verified": true
+}
+``` 
 
 JOB-TAGS<br>
 POST/jobtags - Configure Job-Types<br>
