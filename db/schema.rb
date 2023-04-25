@@ -95,16 +95,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_19_091422) do
     t.index ["jobtag_code"], name: "index_jobtags_on_jobtag_code", unique: true
   end
 
-  create_table "posts", force: :cascade do |t|
-    t.string "post_code"
-    t.string "title"
-    t.string "media"
-    t.string "description"
-    t.integer "likes"
-    t.string "user_code"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "posts", id: :serial, force: :cascade do |t|
+    t.string "post_code", limit: 255, null: false
+    t.string "title", limit: 255, null: false
+    t.string "media", limit: 255
+    t.text "description", null: false
+    t.integer "likes", null: false
+    t.string "user_code", limit: 255, null: false
+    t.datetime "created_at", precision: nil, default: -> { "now()" }
+    t.datetime "updated_at", precision: nil, default: -> { "now()" }
     t.index ["post_code"], name: "index_posts_on_post_code", unique: true
+    t.index ["post_code"], name: "posts_post_code_key", unique: true
   end
 
   create_table "seekers", force: :cascade do |t|

@@ -304,10 +304,11 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   jwt
+  loofah (~> 2.20.0)
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors
-  rails (~> 7.0.4, >= 7.0.4.3)
+  rails (~> 7.0.4)
   rubocop
   rubocop-rails
   ruby_audit
@@ -320,7 +321,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 2.7.4p191
+   ruby 2.7.0p0
 
 BUNDLED WITH
    2.4.9
