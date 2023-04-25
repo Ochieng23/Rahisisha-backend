@@ -63,8 +63,8 @@ group :test do
   gem 'webdrivers'
 end
 
-gem 'activestorage', '~> 7.0', '>= 7.0.4.3'
+# gem 'activestorage', '~> 7.0', '>= 7.0.4.3'
 
-gem "image_processing", ">= 1.2"
+# gem "image_processing", ">= 1.2"
 
-gem "azure-storage-blob", require: false
+# gem "azure-storage-blob", require: false
