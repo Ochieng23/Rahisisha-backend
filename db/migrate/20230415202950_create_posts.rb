@@ -11,7 +11,7 @@ class CreatePosts < ActiveRecord::Migration[7.0]
       t.string :user_code
 
       t.timestamps
-    end
+    end unless table_exists? :posts
     add_index :posts, :post_code, unique: true
   end
 end
