@@ -7,7 +7,7 @@ services:
     name: Rahisisha Backend
     env: ruby
     plan: free
-    buildCommand: "./bin/render-build.sh"
+    buildCommand: bundle install
     startCommand: bundle exec rails s
     envVars:
      - key: RAILS_MASTER_KEY
