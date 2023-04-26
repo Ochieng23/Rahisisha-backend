@@ -12,4 +12,5 @@ class Seeker < ApplicationRecord
 
     # relations
     belongs_to :user, foreign_key: :user_code
+    belongs_to :post, foreign_key: :post_code
 end
