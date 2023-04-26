@@ -7,4 +7,5 @@ class Post < ApplicationRecord
 
     belongs_to :user, foreign_key: :user_code
     has_many :comments, foreign_key: :post_code
+    has_one :seeker, through: :user
 end
