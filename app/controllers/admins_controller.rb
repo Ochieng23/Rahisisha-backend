@@ -42,7 +42,7 @@ class AdminsController < ApplicationController
     end
     def role_auth
         # Get token from request headers
-        role = "ADMIN"
+        role = "admin"
         header = request.headers['Authorization']
         token = header.split(' ').last if header
         if token

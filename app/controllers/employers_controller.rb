@@ -3,6 +3,11 @@
 class EmployersController < ApplicationController
     before_action :authenticate_user
     before_action :role_auth
+
+    def index 
+        employers = Employer.all
+        render json: employers
+    end 
     def create
         employer = Employer.create!(employer_code: generate_code(12), company_name: params[:company_name], email: params[:email], verified: params[:verified], user_code: params[:user_code])
         render json: employer, status: :created
@@ -37,7 +42,7 @@ class EmployersController < ApplicationController
 
     def role_auth
         # Get token from request headers
-        role = ["EMPLOYER", "ADMIN"]
+        role = ["employer", "admin"]
         header = request.headers['Authorization']
         token = header.split(' ').last if header
         if token
