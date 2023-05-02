@@ -13,6 +13,11 @@ class EmployersController < ApplicationController
         render json: employer, status: :ok
     end
 
+    def index 
+        employers = Employer.all
+        render json: employers
+    end 
+
     def update
         employer = find_employer
         employer.update!(employer_params)
@@ -37,7 +42,7 @@ class EmployersController < ApplicationController
 
     def role_auth
         # Get token from request headers
-        role = ["EMPLOYER", "ADMIN"]
+        role = ["employer", "admin"]
         header = request.headers['Authorization']
         token = header.split(' ').last if header
         if token

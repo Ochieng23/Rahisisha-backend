@@ -51,7 +51,7 @@ class JobsController < ApplicationController
     
     def role_auth
         # Get token from request headers
-        role = ["EMPLOYER", "ADMIN"]
+        role = ["employer", "admin"]
         header = request.headers['Authorization']
         token = header.split(' ').last if header
         if token

@@ -11,6 +11,11 @@ class CommentsController < ApplicationController
         render json: comment, status: :ok
     end
 
+    def index
+        comments = Comment.all
+        render json: comments
+    end 
+
     # '/comment/:id' edits an comment of id in params(Update)
     def update
         comment = find_comment
