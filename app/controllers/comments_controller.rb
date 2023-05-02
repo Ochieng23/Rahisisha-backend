@@ -6,6 +6,11 @@ class CommentsController < ApplicationController
         render json: comment, status: :created
     end
 
+    def index
+        comments = Comment.all
+        render json: comments
+    end 
+
     def show
         comment = find_comment
         render json: comment, status: :ok
